@@ -44,9 +44,11 @@ p {
 }
 
 main {
+  position: relative;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  height: inherit;
 }
 
 .logo {
@@ -54,9 +56,14 @@ main {
   padding-bottom: 50px;
 }
 
-.banner-container img,
 .logo img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.banner-container img {
+  width: 100%;
   height: auto;
 }
 
@@ -68,6 +75,7 @@ main {
 
 .content h1 {
   margin-bottom: 30px;
+  font-size: 2.5em;
 }
 
 .content p {
@@ -90,14 +98,71 @@ main {
   color: #fff;
 }
 
+.social-container {
+  width: 100%;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-container span {
+  border: 1px solid #fff;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  text-align: center;
+}
+
+.social-container span i {
+  width: 20px;
+  height: 20px;
+}
+
 @media screen and (max-width: 1024px) {
+  .container {
+    background: url("./images/bg-desktop.svg") no-repeat top;
+    background-size: contain;
+  }
   .main-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .logo {
-    max-width: 180px;
-    width: 100%;
+  .content {
+    color: #fff;
+    padding: 10px;
+    line-height: 1.6;
+  }
+
+  .content h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+
+  .social-container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    background: url("./images/bg-mobile.svg") no-repeat top;
+  }
+
+  .content {
+    color: #fff;
+    padding: 10px;
+    line-height: 1.6;
+  }
+
+  .content h1 {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+
+  .content a {
+    padding: 10px 100px;
   }
 }
